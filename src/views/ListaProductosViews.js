@@ -17,12 +17,12 @@ export default function ListaProductosViews() {
   useEffect(() => {
     getProductos();
   }, []);
-  
+
   return (
     <div>
       <h1>Productos registrados</h1>
 
-      <table className="table">
+      {/* <table className="table">
         <thead></thead>
         <tbody>
           {productos.map(
@@ -37,7 +37,7 @@ export default function ListaProductosViews() {
             )
           )}
         </tbody>
-      </table>
+      </table> */}
 
       {/* Mi Api */}
 
