@@ -23,16 +23,36 @@ export default function ListaProductosViews() {
       <h1>Productos registrados</h1>
 
       <table className="table">
-        <thead></thead>
+        <thead>
+          <tr>
+            <th> id</th>
+            <th> descripcion</th>
+            <th> tipoCarnada</th>
+            <th> comentarios</th>
+            <th> likes</th>
+            <th> fechaRegistro</th>
+          </tr>
+        </thead>
         <tbody>
           {productos.map(
-            ({ id, descripcion, tipoCarnada, comentarios, likes }, i) => (
+            (
+              {
+                id,
+                descripcion,
+                tipoCarnada,
+                comentarios,
+                likes,
+                fechaRegistro,
+              },
+              i
+            ) => (
               <tr key={i}>
                 <td>{id}</td>
                 <td>{descripcion}</td>
                 <td>{tipoCarnada}</td>
                 <td>{comentarios}</td>
                 <td>{likes}</td>
+                <td>{fechaRegistro}</td>
               </tr>
             )
           )}
@@ -55,7 +75,6 @@ export default function ListaProductosViews() {
               <td>{title}</td>
               <td>{author}</td>
               <td>{isbn}</td>
-              
             </tr>
           ))}
         </tbody>
